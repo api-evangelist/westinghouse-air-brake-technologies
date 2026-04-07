@@ -1,7 +1,12 @@
 aid: westinghouse-air-brake-technologies
-url: https://raw.githubusercontent.com/api-evangelist/westinghouse-air-brake-technologies/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/westinghouse-air-brake-technologies/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.westinghouse-air-brake-technologies.com
+description: >-
+  Westinghouse Air Brake Technologies (Wabtec) is a leading global provider of equipment,
+  systems, digital solutions, and value-added services for the freight rail and passenger
+  transit industries.
