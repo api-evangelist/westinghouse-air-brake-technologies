@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/westinghouse-air-brake-technologies/main/json-schema/westinghouse-air-brake-technologies-work-order-schema.json",
+  "title": "Work Order",
+  "description": "Represents a maintenance work order in Wabtec's Condition Monitoring Management System (CMMS).",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique work order identifier."
+    },
+    "workOrderNumber": {
+      "type": "string",
+      "description": "Human-readable work order number."
+    },
+    "assetId": {
+      "type": "string",
+      "description": "Identifier of the locomotive or railcar being serviced."
+    },
+    "assetType": {
+      "type": "string",
+      "description": "Type of asset.",
+      "enum": ["locomotive", "railcar", "wayside-equipment", "signaling-equipment"]
+    },
+    "workType": {
+      "type": "string",
+      "description": "Type of maintenance work.",
+      "enum": ["preventive", "corrective", "inspection", "overhaul", "emergency"]
+    },
+    "status": {
+      "type": "string",
+      "description": "Current work order status.",
+      "enum": ["open", "in-progress", "pending-parts", "completed", "cancelled"]
+    },
+    "priority": {
+      "type": "string",
+      "description": "Work order priority level.",
+      "enum": ["critical", "high", "medium", "low"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the maintenance work required."
+    },
+    "location": {
+      "type": "string",
+      "description": "Maintenance facility or location where work is performed."
+    },
+    "assignedTechnician": {
+      "type": "string",
+      "description": "Name or ID of the technician assigned to this work order."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scheduledDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "faultCodes": {
+      "type": "array",
+      "description": "Fault codes that triggered this work order.",
+      "items": {"type": "string"}
+    },
+    "partsUsed": {
+      "type": "array",
+      "description": "Parts consumed during maintenance.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "partNumber": {"type": "string"},
+          "description": {"type": "string"},
+          "quantity": {"type": "integer"}
+        }
+      }
+    }
+  },
+  "required": ["id", "assetId", "workType", "status", "priority"]
+}

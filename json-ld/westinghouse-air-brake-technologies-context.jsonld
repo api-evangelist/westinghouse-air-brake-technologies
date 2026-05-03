@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "schema": "https://schema.org/",
+    "wabtec": "https://www.wabteccorp.com/ontology/",
+
+    "Locomotive": {
+      "@id": "wabtec:Locomotive",
+      "@type": "@id"
+    },
+    "locomotiveId": {
+      "@id": "wabtec:locomotiveId",
+      "@type": "xsd:string"
+    },
+    "roadNumber": {
+      "@id": "schema:identifier",
+      "@type": "xsd:string"
+    },
+    "locomotiveModel": {
+      "@id": "schema:model",
+      "@type": "xsd:string"
+    },
+    "manufacturer": {
+      "@id": "schema:manufacturer",
+      "@type": "@id"
+    },
+    "railroad": {
+      "@id": "wabtec:railroad",
+      "@type": "xsd:string"
+    },
+    "operationalStatus": {
+      "@id": "schema:operatingStatus",
+      "@type": "xsd:string"
+    },
+    "horsepower": {
+      "@id": "wabtec:horsepower",
+      "@type": "xsd:integer"
+    },
+    "engineType": {
+      "@id": "wabtec:engineType",
+      "@type": "xsd:string"
+    },
+    "mileage": {
+      "@id": "schema:mileageFromOdometer",
+      "@type": "xsd:double"
+    },
+    "fuelLevel": {
+      "@id": "wabtec:fuelLevel",
+      "@type": "xsd:double"
+    },
+    "faultCodes": {
+      "@id": "wabtec:faultCodes",
+      "@type": "xsd:string"
+    },
+
+    "WorkOrder": {
+      "@id": "wabtec:WorkOrder",
+      "@type": "@id"
+    },
+    "workOrderId": {
+      "@id": "wabtec:workOrderId",
+      "@type": "xsd:string"
+    },
+    "workType": {
+      "@id": "wabtec:workType",
+      "@type": "xsd:string"
+    },
+    "workOrderStatus": {
+      "@id": "schema:orderStatus",
+      "@type": "xsd:string"
+    },
+    "priority": {
+      "@id": "schema:priority",
+      "@type": "xsd:string"
+    },
+    "assignedTechnician": {
+      "@id": "schema:worksFor",
+      "@type": "@id"
+    },
+
+    "GeoLocation": {
+      "@id": "schema:GeoCoordinates",
+      "@type": "@id"
+    },
+    "latitude": {
+      "@id": "schema:latitude",
+      "@type": "xsd:double"
+    },
+    "longitude": {
+      "@id": "schema:longitude",
+      "@type": "xsd:double"
+    }
+  }
+}

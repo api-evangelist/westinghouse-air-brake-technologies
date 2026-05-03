@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/westinghouse-air-brake-technologies/main/json-schema/westinghouse-air-brake-technologies-locomotive-schema.json",
+  "title": "Locomotive",
+  "description": "Represents a locomotive asset tracked by the Wabtec condition monitoring and fleet management platform.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique locomotive identifier within the Wabtec platform."
+    },
+    "roadNumber": {
+      "type": "string",
+      "description": "Railroad-assigned road number for the locomotive."
+    },
+    "model": {
+      "type": "string",
+      "description": "Locomotive model designation (e.g., ES44AC, ET44AH, SD70ACe)."
+    },
+    "manufacturer": {
+      "type": "string",
+      "description": "Locomotive manufacturer name."
+    },
+    "railroad": {
+      "type": "string",
+      "description": "Railroad operator owning or operating the locomotive."
+    },
+    "status": {
+      "type": "string",
+      "description": "Current operational status of the locomotive.",
+      "enum": ["in-service", "out-of-service", "in-maintenance", "stored", "unknown"]
+    },
+    "location": {
+      "type": "object",
+      "description": "Current geographic location from telematics.",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "horsepower": {
+      "type": "integer",
+      "description": "Rated horsepower of the locomotive."
+    },
+    "engineType": {
+      "type": "string",
+      "description": "Engine technology type.",
+      "enum": ["diesel-electric", "electric", "hybrid", "battery-electric"]
+    },
+    "mileage": {
+      "type": "number",
+      "format": "double",
+      "description": "Total accumulated mileage in miles."
+    },
+    "fuelLevel": {
+      "type": "number",
+      "format": "double",
+      "description": "Current fuel level as percentage of capacity."
+    },
+    "lastMaintenanceDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the most recent maintenance event."
+    },
+    "nextScheduledMaintenance": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of next scheduled maintenance."
+    },
+    "faultCodes": {
+      "type": "array",
+      "description": "Active fault codes from onboard diagnostics.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["id", "roadNumber", "railroad", "status"]
+}

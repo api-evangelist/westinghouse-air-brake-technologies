@@ -1,0 +1,22 @@
+{
+  "name": "Locomotive",
+  "description": "Wabtec fleet management locomotive asset structure.",
+  "fields": [
+    {"name": "id", "type": "string", "required": true, "description": "Unique locomotive identifier."},
+    {"name": "roadNumber", "type": "string", "required": true, "description": "Railroad-assigned road number."},
+    {"name": "model", "type": "string", "required": false, "description": "Locomotive model (e.g., ES44AC, ET44AH)."},
+    {"name": "manufacturer", "type": "string", "required": false, "description": "Manufacturer name."},
+    {"name": "railroad", "type": "string", "required": true, "description": "Operating railroad."},
+    {"name": "status", "type": "string", "required": true, "description": "in-service, out-of-service, in-maintenance, stored, or unknown."},
+    {"name": "location.latitude", "type": "number", "required": false, "description": "GPS latitude."},
+    {"name": "location.longitude", "type": "number", "required": false, "description": "GPS longitude."},
+    {"name": "location.timestamp", "type": "date-time", "required": false, "description": "Location timestamp."},
+    {"name": "horsepower", "type": "integer", "required": false, "description": "Rated horsepower."},
+    {"name": "engineType", "type": "string", "required": false, "description": "diesel-electric, electric, hybrid, or battery-electric."},
+    {"name": "mileage", "type": "number", "required": false, "description": "Total accumulated mileage."},
+    {"name": "fuelLevel", "type": "number", "required": false, "description": "Fuel level percentage."},
+    {"name": "lastMaintenanceDate", "type": "date", "required": false, "description": "Most recent maintenance date."},
+    {"name": "nextScheduledMaintenance", "type": "date", "required": false, "description": "Next scheduled maintenance date."},
+    {"name": "faultCodes[]", "type": "string", "required": false, "description": "Active diagnostic fault codes."}
+  ]
+}
