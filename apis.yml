@@ -81,6 +81,8 @@ apis:
         url: https://www.wabteccorp.com/digital-intelligence/condition-monitoring
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/wabtec
   - type: Website
     url: https://www.wabteccorp.com
   - type: Portal
