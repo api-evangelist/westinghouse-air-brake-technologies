@@ -1,7 +1,9 @@
 ---
 title: Westinghouse Air Brake Technologies Corp (NYSE:WAB) ...
 url: https://www.proactiveinvestors.com/NYSE:WAB/Westinghouse-Air-Brake-Technologies-Corp
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Westinghouse Air Brake Technologies" press release artificial intelligence'
 position: 4
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: Westinghouse Air Brake Technologies Corporation
 url: https://www.fitchratings.com/research/corporate-finance/westinghouse-air-brake-technologies-corporation-10-02-2025
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Westinghouse Air Brake Technologies" press release artificial intelligence'
 position: 5
 source: serpapi-google
