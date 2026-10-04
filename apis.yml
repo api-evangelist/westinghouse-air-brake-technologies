@@ -1,5 +1,5 @@
 aid: westinghouse-air-brake-technologies
-name: "Westinghouse Air Brake Technologies Corporation"
+name: Wabtec
 deliveryModel:
   model: unknown
   open_source: false
@@ -125,3 +125,4 @@ common:
     url: https://www.linkedin.com/company/wabtec-corporation
   - type: PrivacyPolicy
     url: https://www.wabteccorp.com/privacy-policy
+x-legal-name: Westinghouse Air Brake Technologies Corporation
